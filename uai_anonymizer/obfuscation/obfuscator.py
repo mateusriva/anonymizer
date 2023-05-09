@@ -2,7 +2,7 @@ import math
 
 import numpy as np
 import scipy.stats as st
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from uai_anonymizer.obfuscation.helpers import kernel_initializer, bilinear_filter, get_default_session_config
 
