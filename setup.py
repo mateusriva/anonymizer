@@ -4,7 +4,7 @@ from distutils.core import setup
 from setuptools import find_packages
 
 setup(name='uai-anonymizer',
-      version='latest',
+      version='1.0',
       packages=find_packages(exclude=['test', 'test.*']),
 
       install_requires=[
