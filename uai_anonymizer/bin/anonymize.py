@@ -17,9 +17,9 @@ limitations under the License.
 
 import argparse
 
-from anonymizer.anonymization import Anonymizer
-from anonymizer.detection import Detector, download_weights, get_weights_path
-from anonymizer.obfuscation import Obfuscator
+from uai_anonymizer.anonymization import Anonymizer
+from uai_anonymizer.detection import Detector, download_weights, get_weights_path
+from uai_anonymizer.obfuscation import Obfuscator
 
 
 def parse_args():
@@ -91,7 +91,7 @@ def main(input_path, image_output_path, weights_path, image_extensions, face_thr
         'plate': plate_threshold
     }
     anonymizer = Anonymizer(obfuscator=obfuscator, detectors=detectors)
-    anonymizer.anonymize_images(input_path=input_path, output_path=image_output_path,
+    uai_anonymizer.anonymize_images(input_path=input_path, output_path=image_output_path,
                                 detection_thresholds=detection_thresholds, file_types=image_extensions.split(','),
                                 write_json=write_json)
 
